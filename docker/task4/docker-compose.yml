@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+
+  reactive-kv-load-balancer:
+    build:
+      context: ../../solution/Task4/load_balancer
+    image: reactive-kv-load-balancer
+    ports:
+      - "9000:9000"
+    networks:
+      - network-reactive
+
+networks:
+  network-reactive:
